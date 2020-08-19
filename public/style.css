@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+  padding: 30px; 
+}
+
+.searchContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 1170px; /* specify a width */
+  margin: 0 auto;  /* centers the container */
+  padding: 0 15px; /* adds some padding to the left and right*/
+}
+
+.jumbotron h2, p {
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . ." ". . ." ". . .";
+}
+
+.resultCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+}
