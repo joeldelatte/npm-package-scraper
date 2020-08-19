@@ -5,7 +5,12 @@ async function npmScraper(package) {
 
   let url = `https://www.npmjs.com/search?q=${package}`;
 
-  const broswer = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+    ],
+  });
   const page = await broswer.newPage();
   await page.goto(url);
 
