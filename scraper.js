@@ -12,7 +12,7 @@ async function npmScraper(package) {
       '--disable-setuid-sandbox',
     ],
   });
-  const page = await broswer.newPage();
+  const page = await browser.newPage();
   await page.goto(url);
 
   /////GIVES TOTAL NUMBER OF SEARCH RESULTS FROM NPM
