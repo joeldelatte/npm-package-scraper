@@ -6,6 +6,7 @@ async function npmScraper(package) {
   let url = `https://www.npmjs.com/search?q=${package}`;
 
   const browser = await puppeteer.launch({
+    headless: true,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
