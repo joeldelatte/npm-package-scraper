@@ -18,7 +18,7 @@ async function npmScraper(package) {
   var packageLinks = [];
 
   //loop through max number of
-  for (i = 1; i <= 18; i++) {
+  for (i = 1; i <= 15; i++) {
     const [el] = await page.$x(
       `//*[@id="app"]/div/div[1]/main/div[2]/div/section[${i}]/div[2]/div[1]/a`
     );
