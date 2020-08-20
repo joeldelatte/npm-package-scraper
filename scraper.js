@@ -15,22 +15,10 @@ async function npmScraper(package) {
   const page = await browser.newPage();
   await page.goto(url);
 
-  /////GIVES TOTAL NUMBER OF SEARCH RESULTS FROM NPM
-  // const [numberOfResultsElement] = await page.$x(
-  //   '//*[@id="app"]/div/div[1]/main/div[1]/div/div[1]/h2'
-  // );
-
-  // const numberOfResultsText = await numberOfResultsElement.getProperty(
-  //   "textContent"
-  // );
-  // const numberOfResultsJSON = await numberOfResultsText.jsonValue();
-  // const numberOfResultsString = JSON.stringify(numberOfResultsJSON);
-  // const numRes = parseInt(numberOfResultsString.match("[0-9]+"));
-
   var packageLinks = [];
 
   //loop through max number of
-  for (i = 1; i <= 20; i++) {
+  for (i = 1; i <= 18; i++) {
     const [el] = await page.$x(
       `//*[@id="app"]/div/div[1]/main/div[2]/div/section[${i}]/div[2]/div[1]/a`
     );
