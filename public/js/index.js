@@ -10,7 +10,7 @@ submitButton.addEventListener("click", function () {
   async function getPackages() {
       searchResults.innerHTML = `<div></div><div><img src="https://media.giphy.com/media/KG4PMQ0jyimywxNt8i/giphy.gif"/></div><div></div>`;
       submitButton.value = "Loading"
-      let response = await fetch("http://localhost:8080/npm-packages", {
+      let response = await fetch("https://npmjs--puppeteer-web-scraper.herokuapp.com/npm-packages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ packageSearch }),
