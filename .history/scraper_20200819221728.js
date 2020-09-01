@@ -26,10 +26,9 @@ async function npmScraper(package) {
   //loop through max number of
   for (i = 1; i <= 18; i++) {
     const [el] = await page.$x(
-      `    /html/body/div/div/div[1]/main/div[2]/div/section[${i}]/div[2]/div[1]/a
-`
+      `//*[@id="app"]/div/div[1]/main/div[2]/div/section[${i}]/div[2]/div[1]/a`
     );
-    //*[@id="app"]/div/div[1]/main/div[2]/div/section[${i}]/div[2]/div[1]/a
+    
     const npmName = await el.getProperty("textContent");
     const name = await npmName.jsonValue();
     const link = await el.getProperty("href");
